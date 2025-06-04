@@ -47,6 +47,7 @@ public class Bank
         String inp=sc.nextLine();
         if(!account.containsKey(inp))
         {
+            System.out.println("Invalid account number!");
             return;
         }
         
