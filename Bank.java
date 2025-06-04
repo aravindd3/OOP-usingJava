@@ -47,8 +47,31 @@ public class Bank
         String inp=sc.nextLine();
         if(!account.containsKey(inp))
         {
-            System.out.println("Invalid account number!");
-            return;
+            System.out.println("Invalid account number!,would you like register with us?");
+            System.out.println(".Type Y if yes, otherwise type any charecter to exit");
+            String ch=sc.nextLine().toUpperCase();
+            if(ch.equals("Y"))
+            {
+                 System.out.println("Please enter the initial deposit amount:");
+                double initdeposit=sc.nextDouble();
+                if( initdeposit>100)
+                {
+                    account.put(inp,initdeposit);
+
+                }
+                else
+                {
+                    System.out.println("Not a valid amount!");
+                    return;
+                }
+                
+            }
+            else
+            {
+               
+                System.out.println("Thankyou,you have succesfully exited!");
+                return;
+            }
         }
         
         
